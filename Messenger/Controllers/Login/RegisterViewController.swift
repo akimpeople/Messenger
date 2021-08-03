@@ -20,12 +20,8 @@ class RegisterViewController: UIViewController {
         let imageView = UIImageView()
         
         imageView.image = UIImage(named: "addPhotoGray")
-        //        imageView.tintColor = .white
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
-        //        imageView.backgroundColor = .gray
-        //        imageView.layer.borderWidth = 1
-        //        imageView.layer.borderColor = UIColor.lightGray.cgColor
         return imageView
         
     }()
@@ -100,7 +96,7 @@ class RegisterViewController: UIViewController {
     
     private let registerButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Sign Up", for: .normal)
+        button.setTitle("Create account", for: .normal)
         button.backgroundColor = .systemGreen
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 12
@@ -111,7 +107,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Sign Up"
+        title = "Create account"
         view.backgroundColor = .white
         
         
@@ -143,6 +139,9 @@ class RegisterViewController: UIViewController {
         gesture.numberOfTouchesRequired = 1
         gesture.numberOfTapsRequired = 1
         imageView.addGestureRecognizer(gesture)
+        
+        gestureAddPhoto.numberOfTouchesRequired = 1
+        gestureAddPhoto.numberOfTapsRequired = 1
         addPhoto.addGestureRecognizer(gestureAddPhoto)
     }
     
@@ -207,7 +206,7 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        // Firebase Log In
+        // Firebase Sign In
         
         DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
             guard let strongSelf = self else {
