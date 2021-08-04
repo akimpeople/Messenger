@@ -194,7 +194,7 @@ typedef void (^FBSDKVerifySignatureCompletionBlock)(BOOL success);
                        status = SecTrustCreateWithCertificates(cert, policy, &trust);
 
                        if (status == errSecSuccess && trust) {
-                           publicKey = SecTrustCopyKey(trust);
+                         publicKey = SecTrustCopyPublicKey(trust);
                        }
 
                        CFRelease(policy);
