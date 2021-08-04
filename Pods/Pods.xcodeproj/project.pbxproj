@@ -921,6 +921,8 @@
 		76290A14912467B4E8154C384E073AE6 /* FPruneForest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023B7FB463E5D50487DCB44EAD7F66 /* FPruneForest.m */; };
 		7650C45826BACCE400895AB6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7650C45726BACCE400895AB6 /* Realm */; };
 		7650C45A26BACCE400895AB6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7650C45926BACCE400895AB6 /* RealmSwift */; };
+		7650C46626BAE90B00895AB6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7650C46526BAE90B00895AB6 /* Realm */; };
+		7650C46826BAE90B00895AB6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7650C46726BAE90B00895AB6 /* RealmSwift */; };
 		765F6AB4EF3DCA6F3ADB0416E944EBF0 /* FBSDKAuthenticationTokenCreating.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F9245DF4253297C24068912010A3AB /* FBSDKAuthenticationTokenCreating.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		76BFF46E0EC3A4BA8063B2462B8F0908 /* FBLPromise+Race.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = FB8447DCB45206B7A8A77A095A279836 /* FBLPromise+Race.h */; };
 		770FCB96B45275ABBC79E4F5689DC4A2 /* FIRWithdrawMFARequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9466B5126C633FF04AC9A438C95841E1 /* FIRWithdrawMFARequest.m */; };
@@ -4661,6 +4663,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7650C46826BAE90B00895AB6 /* RealmSwift in Frameworks */,
+				7650C46626BAE90B00895AB6 /* Realm in Frameworks */,
 				9890FE033A7757B6C0D766E4C0850977 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -8879,6 +8883,10 @@
 				A07C4FB3A2693B5359A67F90A84A3087 /* PBXTargetDependency */,
 			);
 			name = "Pods-Messenger";
+			packageProductDependencies = (
+				7650C46526BAE90B00895AB6 /* Realm */,
+				7650C46726BAE90B00895AB6 /* RealmSwift */,
+			);
 			productName = "Pods-Messenger";
 			productReference = DAD50255B9B4AB2D43A945BAD2322B03 /* Pods_Messenger.framework */;
 			productType = "com.apple.product-type.framework";
@@ -12615,6 +12623,16 @@
 			productName = Realm;
 		};
 		7650C45926BACCE400895AB6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7650C45626BACCE400895AB6 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		7650C46526BAE90B00895AB6 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7650C45626BACCE400895AB6 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		7650C46726BAE90B00895AB6 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7650C45626BACCE400895AB6 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
