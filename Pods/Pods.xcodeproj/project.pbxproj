@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -919,6 +919,8 @@
 		75873E037FA9D4B0D667B80592890BA7 /* FImmutableSortedSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F5FE7C80880F20F112FDEC829498091 /* FImmutableSortedSet.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		759C1E07CF723C2464D9346BE2D2C1A6 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E274308FD020FE6EDE58830B5B20B32B /* MessageType.swift */; };
 		76290A14912467B4E8154C384E073AE6 /* FPruneForest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40023B7FB463E5D50487DCB44EAD7F66 /* FPruneForest.m */; };
+		7650C45826BACCE400895AB6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7650C45726BACCE400895AB6 /* Realm */; };
+		7650C45A26BACCE400895AB6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7650C45926BACCE400895AB6 /* RealmSwift */; };
 		765F6AB4EF3DCA6F3ADB0416E944EBF0 /* FBSDKAuthenticationTokenCreating.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F9245DF4253297C24068912010A3AB /* FBSDKAuthenticationTokenCreating.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		76BFF46E0EC3A4BA8063B2462B8F0908 /* FBLPromise+Race.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = FB8447DCB45206B7A8A77A095A279836 /* FBLPromise+Race.h */; };
 		770FCB96B45275ABBC79E4F5689DC4A2 /* FIRWithdrawMFARequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9466B5126C633FF04AC9A438C95841E1 /* FIRWithdrawMFARequest.m */; };
@@ -4479,6 +4481,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7650C45A26BACCE400895AB6 /* RealmSwift in Frameworks */,
+				7650C45826BACCE400895AB6 /* Realm in Frameworks */,
 				03D71C90FB4F1CEF230D66B7D48A0D62 /* Foundation.framework in Frameworks */,
 				8B4F9590DFF1F4A1250D0427CC12D98C /* SafariServices.framework in Frameworks */,
 			);
@@ -8636,6 +8640,10 @@
 			dependencies = (
 			);
 			name = AppAuth;
+			packageProductDependencies = (
+				7650C45726BACCE400895AB6 /* Realm */,
+				7650C45926BACCE400895AB6 /* RealmSwift */,
+			);
 			productName = AppAuth;
 			productReference = 3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */;
 			productType = "com.apple.product-type.framework";
@@ -8990,6 +8998,9 @@
 				zh_TW,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			packageReferences = (
+				7650C45626BACCE400895AB6 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = E4AA51B8883FD5759F487FB6C82361D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -12585,6 +12596,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7650C45626BACCE400895AB6 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7650C45726BACCE400895AB6 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7650C45626BACCE400895AB6 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		7650C45926BACCE400895AB6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7650C45626BACCE400895AB6 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
