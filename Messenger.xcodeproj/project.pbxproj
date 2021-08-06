@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04527A4231C20B41FADC9821 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8EF74662D6FF11554F3491 /* Pods_Messenger.framework */; };
+		7610341826BBE9A8004756BA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7610341726BBE9A8004756BA /* ChatViewController.swift */; };
 		7666A85626AD3FD1005185FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7666A85526AD3FD1005185FF /* GoogleService-Info.plist */; };
 		768ECBB326AF2FDC0033F71C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768ECBB226AF2FDB0033F71C /* DatabaseManager.swift */; };
 		76F381CF26A460C70013259F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F381CE26A460C70013259F /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7610341726BBE9A8004756BA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7666A85526AD3FD1005185FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		768ECBB226AF2FDB0033F71C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		76F381CB26A460C70013259F /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 				76F381EF26A468E10013259F /* VideoPlayerViewController.swift */,
 				76F381F126A469130013259F /* NewConversationViewController.swift */,
 				76F381F326A4693D0013259F /* ProfileViewController.swift */,
+				7610341726BBE9A8004756BA /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				76F381CF26A460C70013259F /* AppDelegate.swift in Sources */,
 				76F381F426A4693D0013259F /* ProfileViewController.swift in Sources */,
 				76F381D126A460C70013259F /* SceneDelegate.swift in Sources */,
+				7610341826BBE9A8004756BA /* ChatViewController.swift in Sources */,
 				76F381EE26A468BD0013259F /* PhotoViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = akim.people.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -497,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = akim.people.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
