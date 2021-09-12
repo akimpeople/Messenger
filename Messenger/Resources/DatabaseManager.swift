@@ -391,6 +391,7 @@ extension DatabaseManager {
                 completion(.failure(DatabaseError.failedToFetch))
                 return
             }
+            
             let messages: [Message] = value.compactMap({ dictionary in
                 guard let name = dictionary["name"] as? String,
                       let isRead = dictionary["is_read"] as? Bool,
@@ -402,6 +403,7 @@ extension DatabaseManager {
                       let date = ChatViewController.dateFormatter.date(from: dateString) else {
                     return nil
                 }
+                
                 var kind: MessageKind?
                 
                 if type == "photo" {
@@ -415,6 +417,18 @@ extension DatabaseManager {
                                       placeholderImage: placeholder,
                                       size: CGSize(width: 300, height: 300))
                     kind = .photo(media)
+                }
+                else if type == "video" {
+                    //video
+                    guard let videoUrl = URL(string: content),
+                          let placeholder = UIImage(named: "video_placeholder") else {
+                        return nil
+                    }
+                    let media = Media(url: videoUrl,
+                                      image: nil,
+                                      placeholderImage: placeholder,
+                                      size: CGSize(width: 300, height: 300))
+                    kind = .video(media)
                 }
                 else {
                     kind = .text(content)
@@ -471,7 +485,10 @@ extension DatabaseManager {
                     message = targetUrlString
                 }
                 break
-            case .video(_):
+            case .video(let mediaItem):
+                if let targetUrlString = mediaItem.url?.absoluteString {
+                    message = targetUrlString
+                }
                 break
             case .location(_):
                 break
